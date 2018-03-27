@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+  <script>
+
+  /*  $(document).ready(function(){
+      $("p").click(function(){
+          $(this).hide();
+      });
+    });
+*/
+  /*  $(document).ready(function(){
+      $("p").click(function(){
+        $("p").hide();
+      })
+      $
+    })
+
+    */
+    //This below script will hide the id selector text.
+  /*  $(document).ready(function(){
+      $("button").click(function(){
+        $("#test").hide();
+      });
+    });
+
+    $(document).ready(function(){
+      $("h2").dblclick(function(){
+        $(".heading-test").hide();
+      })
+    })
+    $(document).ready(function(){
+      $("#test").mouseenter(function(){
+        alert("You entered test!");
+    });
+  });
+  $(document).ready(function(){
+    $(".heading-test").mouseleave(function(){
+      alert("You left heading test");
+    });
+  });
+
+
+  //mousehover function
+  $(document).ready(function(){
+    $("#test").hover(function(){
+      alert("You entered test div");
+    },
+    function(){
+      alert("You leave this area");
+    });
+  });
+
+  */
+
+  //focus function and blur function
+  $(document).ready(function(){
+    $("input").focus(function(){
+       $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+      $(this).css("background-color","#fff");
+    });
+  });
+
+  //on method:it attaches one or more event handlers for the selected elements.//this is multiple
+   $(document).ready(function(){
+     $("#test").on({
+       mouseenter: function(){
+         $(this).css("background-color", "lightgray");
+       },
+       mouseleave: function(){
+         $(this).css("background-color", "lightblue");
+       },
+       click: function(){
+         $(this).css("background-color","yellow");
+       }
+     });
+   });
+
+   //hide and show function
+   $(document).ready(function(){
+     $("#hide").click(function(){
+       $("p").hide(1000);
+     });
+     $("#show").click(function(){
+       $("p").show(500);
+     });
+   });
+
+  //use of toggle
+   $(document).ready(function(){
+     $("button").click(function(){
+       $("p").toggle();
+     });
+   });
+ </script>
+</head>
+</body>
+    <p>If you click me, I will disappear.</p>
+    <p>click me away</p>
+    <p>clic me too</p>
+    <h1 id="test">This is another page</h1>
+    <button>click me</button>
+    <h2 class="heading-test">This is second heading</h2>
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email">
+    <p>See the Game</p>
+    <button id="hide">Hide me </button>
+    <button id="show">Show me </button>
+</html>

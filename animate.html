@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+/*
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({
+           left: '250px',
+           opacity: '0.5',
+          //height: '+=150px', //relative values.
+          //width: '+=150px'
+          height: 'toggle',
+          width: 'toggle'
+      });
+    });
+}); */
+  $(document).ready(function(){
+    var div = $("div");
+     //div.animate({height: '300px' , opacity: '0.4'} , "slow");
+    //div.animate({height: '300px' , opacity: '0.4'} , "slow");
+    //div.animate({height: '600px' , opacity: '0.8'} , "slow");
+    //div.animate({height: '600px' , opacity: '0.8'} , "slow");
+    div.animate({left: '100px'} , "slow");
+    div.animate({fontSize: '3em'} , "slow");
+  });
+</script>
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By To the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;">Hi</div>
+
+</body>
+</html>

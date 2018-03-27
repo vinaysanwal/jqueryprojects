@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </script>
+    <script>
+       $(document).ready(function(){
+         $("#button-call").click(function(){
+         $("#with-callback").hide("slow", function(){
+            alert("We are hiding the paragraph");
+         }); });
+
+         //this is without using a callback function.....
+         $("#button-nocall").click(function(){
+           $("#without-callback").hide();
+           alert("We are about to hide the para without callback");
+         });
+
+         //chaining of an element:
+         $("button").click(function(){
+           $('#p1').css("color","red").slideUp(2000).slideDown(2000); //use of chaining 
+         });
+       });
+    </script>
+  </head>
+  <body>
+    <button id="button-call">Hide</button>
+    <p id="with-callback"> Paragraph with the content. </p>
+
+    <button id="button-nocall">Hide</button>
+    <p id="without-callback">Paragraph with a little callback</p>
+
+    <p id="p1">We are param </p>
+    <button id="button-chaining">Click me</button>
+  </body>
+</html>

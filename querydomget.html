@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+         $("#btn1").click(function(){
+            alert("Text: " + $("#test").text());
+         });
+         $("#btn2").click(function(){
+             alert("HTML: " + $("#test").html());
+         });
+        $("#btn3").click(function(){
+          alert("Value:" + $("#test1").val());
+        });
+        $("#btn4").click(function(){
+          alert($("#google").attr("href"));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="test">This is some <b>bold</b> text in para</p>
+    <input type="text" id="test1" value="Mickey Mouse">
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show Html</button>
+    <button id="btn3">Show val </button>
+    <p><a href="https://www.google.com" id="google">Google.com</a></p>
+    <button id="btn4">Show href val</button>
+  </body>
